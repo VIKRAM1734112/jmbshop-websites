@@ -1723,6 +1723,1946 @@ const WHATSAPP_NUMBER = "917704096301";
 ========================================== */
 
 const products = [
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JMB WPC STORE</title>
+
+    <style>
+
+        /* ================================
+   RESET & GLOBAL
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f5f0;
+    color:#222;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.container{
+    width:92%;
+    max-width:1250px;
+    margin:auto;
+}
+
+
+/* ================================
+   TOP BAR
+================================ */
+
+.top-bar{
+    background:#1d1d1d;
+    color:white;
+    padding:9px 0;
+    font-size:13px;
+}
+
+.top-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+header{
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-icon{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#b8860b;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    font-size:19px;
+}
+
+.logo h2{
+    font-size:17px;
+}
+
+.logo span{
+    color:#b8860b;
+    font-size:11px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#b8860b;
+}
+
+.cart-button{
+    border:0;
+    background:#b8860b;
+    color:white;
+    padding:11px 17px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+.cart-count{
+    background:#222;
+    padding:2px 7px;
+    border-radius:20px;
+    margin-left:4px;
+}
+
+.menu{
+    display:none;
+    border:0;
+    background:none;
+    font-size:25px;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero{
+    min-height:500px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.58)),
+    url("img.jpg") center/contain;
+
+    display:flex;
+    align-items:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:720px;
+}
+
+.hero-small{
+    color:#e3bb4c;
+    font-weight:bold;
+    margin-bottom:15px;
+    font-size:16px;
+}
+
+.hero h1{
+    font-size:54px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#e3bb4c;
+}
+
+.hero p{
+    color:#eee;
+    line-height:1.7;
+    font-size:17px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:5px;
+    font-weight:bold;
+    border:none;
+}
+
+.primary{
+    background:#b8860b;
+    color:white;
+}
+
+.primary:hover{
+    background:#916c08;
+}
+
+.outline{
+    border:2px solid white;
+    color:white;
+}
+
+.outline:hover{
+    background:white;
+    color:#222;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.features{
+    background:white;
+    padding:25px 0;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.feature{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.feature-icon{
+    font-size:28px;
+}
+
+.feature p{
+    font-size:12px;
+    color:#777;
+    margin-top:4px;
+}
+
+
+/* ================================
+   SECTION
+================================ */
+
+.section{
+    padding:75px 0;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title span{
+    color:#b8860b;
+    font-size:13px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.title h2{
+    font-size:38px;
+    margin:8px 0;
+}
+
+.title p{
+    color:#777;
+    max-width:650px;
+    margin:auto;
+    line-height:1.6;
+}
+
+
+/* ================================
+   CATEGORY
+================================ */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.category{
+    height:220px;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    background-size:cover;
+    background-position:center;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.category:hover{
+    transform:translateY(-6px);
+}
+
+.category-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(transparent,rgba(0,0,0,.85));
+    display:flex;
+    align-items:flex-end;
+    padding:22px;
+    color:white;
+}
+
+.category h3{
+    font-size:20px;
+}
+
+.category p{
+    font-size:12px;
+    margin-top:5px;
+}
+
+
+/* ================================
+   PRODUCTS
+================================ */
+
+.product-tools{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+}
+
+.search{
+    width:300px;
+}
+
+.search input{
+    width:100%;
+    padding:13px 18px;
+    border:1px solid #ddd;
+    border-radius:25px;
+    outline:none;
+}
+
+.filters{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+}
+
+.filter{
+    padding:9px 14px;
+    border:1px solid #ddd;
+    background:white;
+    border-radius:20px;
+}
+
+.filter.active,
+.filter:hover{
+    background:#b8860b;
+    color:white;
+    border-color:#b8860b;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product{
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 18px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+}
+
+.product-image{
+    height:210px;
+    background:#eee;
+    position:relative;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.badge{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:#b8860b;
+    color:white;
+    padding:5px 9px;
+    border-radius:15px;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.product-info{
+    padding:17px;
+}
+
+.category-name{
+    color:#b8860b;
+    font-size:11px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.product h3{
+    font-size:17px;
+    margin:7px 0;
+}
+
+.description{
+    color:#777;
+    font-size:12px;
+    line-height:1.5;
+    min-height:36px;
+}
+
+.product-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:14px;
+}
+
+.price{
+    font-size:19px;
+    font-weight:bold;
+}
+
+.add{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:0;
+    background:#222;
+    color:white;
+    font-size:21px;
+}
+
+.add:hover{
+    background:#b8860b;
+}
+
+
+/* ================================
+   WHY US
+================================ */
+
+.why{
+    background:#222;
+    color:white;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.why-card{
+    border:1px solid #444;
+    border-radius:10px;
+    padding:30px;
+}
+
+.why-card:hover{
+    border-color:#b8860b;
+}
+
+.why-icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#aaa;
+    line-height:1.6;
+    margin-top:10px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.contact-info{
+    background:#222;
+    color:white;
+    padding:40px;
+    border-radius:10px;
+}
+
+.contact-info h2{
+    margin-bottom:25px;
+}
+
+.contact-item{
+    display:flex;
+    gap:15px;
+    margin:23px 0;
+}
+
+.contact-item-icon{
+    font-size:23px;
+}
+
+.contact-item p{
+    color:#aaa;
+    margin-top:4px;
+    line-height:1.5;
+}
+
+.contact-form{
+    background:white;
+    padding:35px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
+    border-radius:10px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:14px;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+
+.contact-form textarea{
+    height:120px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+    background:#111;
+    color:white;
+    padding:50px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:30px;
+}
+
+.footer-column h3{
+    margin-bottom:15px;
+}
+
+.footer-column p,
+.footer-column a{
+    color:#999;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.footer-column a{
+    display:block;
+    margin-bottom:7px;
+}
+
+.copyright{
+    border-top:1px solid #333;
+    text-align:center;
+    margin-top:35px;
+    padding-top:20px;
+    color:#666;
+    font-size:12px;
+}
+
+
+/* ================================
+   CART
+================================ */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:none;
+    z-index:1999;
+}
+
+.overlay.active{
+    display:block;
+}
+
+.cart{
+    position:fixed;
+    right:-450px;
+    top:0;
+    width:420px;
+    max-width:100%;
+    height:100vh;
+    background:white;
+    z-index:2000;
+    transition:.4s;
+    display:flex;
+    flex-direction:column;
+}
+
+.cart.active{
+    right:0;
+}
+
+.cart-header{
+    padding:20px;
+    border-bottom:1px solid #ddd;
+    display:flex;
+    justify-content:space-between;
+}
+
+.close{
+    border:0;
+    background:none;
+    font-size:25px;
+}
+
+.cart-items{
+    padding:20px;
+    overflow-y:auto;
+    flex:1;
+}
+
+.cart-item{
+    display:flex;
+    gap:12px;
+    padding-bottom:15px;
+    margin-bottom:15px;
+    border-bottom:1px solid #eee;
+}
+
+.cart-item img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.cart-info{
+    flex:1;
+}
+
+.cart-info h4{
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.cart-price{
+    color:#b8860b;
+    font-weight:bold;
+}
+
+.quantity{
+    display:flex;
+    gap:8px;
+    align-items:center;
+    margin-top:7px;
+}
+
+.quantity button{
+    width:25px;
+    height:25px;
+    border:1px solid #ddd;
+    background:white;
+}
+
+.remove{
+    border:0;
+    background:none;
+    color:red;
+    font-size:11px;
+    margin-top:5px;
+}
+
+.cart-footer{
+    padding:20px;
+    border-top:1px solid #ddd;
+}
+
+.total{
+    display:flex;
+    justify-content:space-between;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.checkout{
+    width:100%;
+    padding:15px;
+    background:#b8860b;
+    color:white;
+    border:0;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+
+/* ================================
+   CHECKOUT MODAL
+================================ */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:3000;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:550px;
+    max-width:100%;
+    max-height:90vh;
+    overflow-y:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    position:relative;
+}
+
+.modal-box input,
+.modal-box textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    margin-bottom:12px;
+    border-radius:5px;
+}
+
+.modal-box textarea{
+    height:90px;
+}
+
+.modal-total{
+    background:#f5f5f5;
+    padding:15px;
+    margin:15px 0;
+}
+
+
+/* ================================
+   WHATSAPP
+================================ */
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    z-index:1500;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media(max-width:1000px){
+
+    .product-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        left:0;
+        top:75px;
+        width:100%;
+        background:white;
+        padding:20px;
+        flex-direction:column;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero{
+        min-height:500px;
+    }
+
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:500px){
+
+    .top-content{
+        flex-direction:column;
+        gap:5px;
+    }
+
+    .product-grid,
+    .category-grid,
+    .feature-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .product-tools{
+        flex-direction:column;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+
+
+/* ================================
+   CUSTOMER REVIEWS
+================================ */
+
+.review-section{
+    background:#fff;
+}
+
+.review-layout{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:30px;
+    align-items:start;
+}
+
+.review-summary,
+.review-form,
+.review-card{
+    background:#f9f7f2;
+    border:1px solid #eee5d2;
+    border-radius:12px;
+    padding:25px;
+}
+
+.review-summary{
+    text-align:center;
+}
+
+.review-average{
+    color:#b8860b;
+    font-size:42px;
+    font-weight:bold;
+    margin:10px 0 4px;
+}
+
+.review-stars{
+    color:#b8860b;
+    letter-spacing:3px;
+    font-size:24px;
+}
+
+.review-muted{
+    color:#777;
+    font-size:13px;
+    line-height:1.6;
+    margin-top:8px;
+}
+
+.review-form h3,
+.review-list-heading{
+    margin-bottom:18px;
+}
+
+.review-form label{
+    display:block;
+    font-weight:bold;
+    font-size:14px;
+    margin:14px 0 7px;
+}
+
+.review-form input,
+.review-form textarea{
+    width:100%;
+    padding:12px 13px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font:inherit;
+    background:white;
+}
+
+.review-form textarea{
+    min-height:110px;
+    resize:vertical;
+}
+
+.star-picker{
+    display:flex;
+    gap:5px;
+}
+
+.star-picker button{
+    border:0;
+    background:transparent;
+    color:#ccc;
+    font-size:30px;
+    padding:0 2px;
+}
+
+.star-picker button.selected,
+.star-picker button:hover{
+    color:#b8860b;
+}
+
+.review-submit{
+    margin-top:16px;
+}
+
+.review-list{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+    margin-top:25px;
+}
+
+.review-card{
+    background:white;
+    padding:20px;
+}
+
+.review-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:10px;
+}
+
+.review-card-name{
+    font-weight:bold;
+    overflow-wrap:anywhere;
+}
+
+.review-card-date{
+    color:#888;
+    font-size:11px;
+    margin-top:5px;
+}
+
+.review-card-stars{
+    color:#b8860b;
+    white-space:nowrap;
+}
+
+.review-card-text{
+    color:#555;
+    font-size:14px;
+    line-height:1.65;
+    overflow-wrap:anywhere;
+}
+
+.review-empty{
+    grid-column:1/-1;
+    text-align:center;
+    padding:25px;
+    color:#777;
+    background:#f9f7f2;
+    border-radius:10px;
+}
+
+@media(max-width:768px){
+    .review-layout{
+        grid-template-columns:1fr;
+    }
+
+    .review-list{
+        grid-template-columns:1fr;
+    }
+}
+
+    </style>
+
+</head>
+
+<body>
+
+   <!-- ================================
+     TOP BAR
+================================ -->
+
+<div class="top-bar">
+
+<div class="container top-content">
+
+<span>🏠 Premium WPC Products</span>
+
+<span>📞 Call: +91 7704096301</span>
+
+</div>
+
+</div>
+
+
+<!-- ================================
+     NAVBAR
+================================ -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+
+<div class="logo-icon">JMB</div>
+
+<div>
+
+<h2>JMB</h2>
+
+<span>WPC STORE</span>
+
+</div>
+
+</a>
+
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+
+<a href="#categories">Categories</a>
+
+<a href="#products">Products</a>
+
+<a href="#about">Why Us</a>
+
+<a href="#reviews">Reviews</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+<button class="cart-button" onclick="openCart()">
+
+🛒 Cart
+
+<span class="cart-count" id="cartCount">0</span>
+
+</button>
+
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+</div>
+
+</header>
+
+
+
+<!-- ================================
+     HERO
+================================ -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-small">
+WELCOME TO JMB WPC STORE
+</div>
+
+<h1>
+Premium WPC Products
+<span>For Modern Homes</span>
+</h1>
+
+<p>
+Explore premium WPC doors, door frames, windows,
+window frames and modern WPC beds.
+Strong, stylish and designed for long-lasting use.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#products" class="btn primary">
+Explore Products
+</a>
+
+<a href="#contact" class="btn outline">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     FEATURES
+================================ -->
+
+<section class="features">
+
+<div class="container feature-grid">
+
+<div class="feature">
+
+<div class="feature-icon">💧</div>
+
+<div>
+<h4>Water Resistant</h4>
+<p>Durable for everyday use.</p>
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🐜</div>
+
+<div>
+<h4>Termite Resistant</h4>
+<p>Reliable WPC material.</p>
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">✨</div>
+
+<div>
+<h4>Modern Designs</h4>
+<p>Beautiful product designs.</p>
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">🛒</div>
+
+<div>
+<h4>Easy Ordering</h4>
+<p>Order through WhatsApp.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     CATEGORIES
+================================ -->
+
+<section class="section" id="categories">
+
+<div class="container">
+
+<div class="title">
+
+<span>Our Collection</span>
+
+<h2>Shop By Category</h2>
+
+<p>
+Choose your required WPC product category.
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<div class="category"
+style="background-image:url('https://github.com/VIKRAM1734112/jmbshop-websites/blob/main/product%20photo/door1.jpg?raw=true')"
+onclick="filterProducts('door')">
+
+<div class="category-overlay">
+
+<div>
+<h3>🚪 WPC Doors</h3>
+<p>Classic, Double & Modern</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category"
+style="background-image:url('https://github.com/VIKRAM1734112/jmbshop-websites/blob/main/product%20photo/frame1.jpg?raw=true')"
+onclick="filterProducts('doorframe')">
+
+<div class="category-overlay">
+
+<div>
+<h3>🚪 Door Frames</h3>
+<p>Classic, Double & Modern</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category"
+style="background-image:url('https://github.com/VIKRAM1734112/jmbshop-websites/blob/main/product%20photo/window1.jpg?raw=true')"
+onclick="filterProducts('window')">
+
+<div class="category-overlay">
+
+<div>
+<h3>🪟 WPC Windows</h3>
+<p>Classic, Double & Modern</p>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="category"
+style="background-image:url('https://github.com/VIKRAM1734112/jmbshop-websites/blob/main/product%20photo/bed1.jpg?raw=true')"
+onclick="filterProducts('bed')">
+
+<div class="category-overlay">
+
+<div>
+<h3>🛏 WPC Beds</h3>
+<p>Single, Double & King Size</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     PRODUCTS
+================================ -->
+
+<section class="section" id="products">
+
+<div class="container">
+
+<div class="title">
+
+<span>Our Products</span>
+
+<h2>WPC Product Collection</h2>
+
+<p>
+Select a category or search for your required product.
+</p>
+
+</div>
+
+
+<div class="product-tools">
+
+
+<div class="search">
+
+<input
+type="text"
+id="searchInput"
+placeholder="🔎 Search product..."
+onkeyup="searchProducts()">
+
+</div>
+
+
+<div class="filters">
+
+<button
+class="filter active"
+onclick="filterProducts('all',this)">
+All
+</button>
+
+<button
+class="filter"
+onclick="filterProducts('door',this)">
+Doors
+</button>
+
+<button
+class="filter"
+onclick="filterProducts('doorframe',this)">
+Door Frames
+</button>
+
+<button
+class="filter"
+onclick="filterProducts('window',this)">
+Windows
+</button>
+
+<button
+class="filter"
+onclick="filterProducts('bed',this)">
+Beds
+</button>
+
+</div>
+
+</div>
+
+
+<div class="product-grid" id="productGrid"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     WHY US
+================================ -->
+
+<section class="section why" id="about">
+
+<div class="container">
+
+<div class="title">
+
+<span>Why Choose Us</span>
+
+<h2>Quality You Can Trust</h2>
+
+<p>
+We provide quality WPC products with attractive
+designs and competitive prices.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="why-icon">🏆</div>
+
+<h3>Quality Products</h3>
+
+<p>
+Carefully selected WPC products for homes
+and commercial requirements.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">💰</div>
+
+<h3>Competitive Prices</h3>
+
+<p>
+Get quality products at reasonable prices.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">🤝</div>
+
+<h3>Customer Support</h3>
+
+<p>
+We help customers choose suitable products
+according to their requirements.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ================================
+     CUSTOMER REVIEWS
+================================ -->
+
+<section class="section review-section" id="reviews">
+    <div class="container">
+        <div class="title">
+            <span>Customer Feedback</span>
+            <h2>Customer Reviews</h2>
+            <p>Share your experience with JMB WPC STORE and help other customers choose confidently.</p>
+        </div>
+
+        <div class="review-layout">
+            <div class="review-summary">
+                <h3>Our Customer Rating</h3>
+                <div class="review-average" id="averageRating">0.0/5</div>
+                <div class="review-stars" id="averageStars" aria-label="Average rating">☆☆☆☆☆</div>
+                <p class="review-muted" id="reviewCount">No reviews yet. Be the first to review!</p>
+            </div>
+
+            <form class="review-form" id="reviewForm">
+                <h3>Write a Review</h3>
+
+                <label for="reviewName">Your Name</label>
+                <input id="reviewName" type="text" maxlength="60" placeholder="Enter your name" required>
+
+                <label>Choose Your Rating</label>
+                <div class="star-picker" id="starPicker" role="group" aria-label="Choose a rating">
+                    <button type="button" data-rating="1" aria-label="1 star">★</button>
+                    <button type="button" data-rating="2" aria-label="2 stars">★</button>
+                    <button type="button" data-rating="3" aria-label="3 stars">★</button>
+                    <button type="button" data-rating="4" aria-label="4 stars">★</button>
+                    <button type="button" data-rating="5" aria-label="5 stars">★</button>
+                </div>
+
+                <label for="reviewText">Your Review</label>
+                <textarea id="reviewText" maxlength="1000" placeholder="Write about your experience..." required></textarea>
+
+                <button class="btn primary review-submit" type="submit">Submit Review</button>
+                <p class="review-muted">Reviews are saved in this browser on this device.</p>
+            </form>
+        </div>
+
+        <div class="review-list-heading" style="margin-top:35px;">
+            <h3>What Customers Say</h3>
+        </div>
+        <div class="review-list" id="reviewList" aria-live="polite"></div>
+    </div>
+</section>
+
+<!-- ================================
+     CONTACT
+================================ -->
+
+<section class="section" id="contact">
+
+<div class="container">
+
+<div class="title">
+
+<span>Get In Touch</span>
+
+<h2>Contact Our Store</h2>
+
+<p>
+For product details, availability and orders,
+contact us directly.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h2>JMB WPC STORE</h2>
+
+
+<div class="contact-item">
+
+<div class="contact-item-icon">📍</div>
+
+<div>
+
+<strong>Store Address</strong>
+
+<p>
+Jai MAA Bhagwati WPC Store, Maithan Road, Near Bus Stand<br>
+Gairsain, Chamoli, Uttarakhand, India 
+
+</p>
+ <a
+            href="https://www.google.com/maps/place/29%C2%B057'26.5%22N+79%C2%B024'35.1%22E/@29.9573591,79.4095452,57m/data=!3m1!1e3!4m13!1m8!3m7!1s0x39a758585b0be1c1:0xc7318703d31d17aa!2sMaithan,+Uttarakhand+246486!3b1!8m2!3d29.9603602!4d79.4123625!16s%2Fg%2F12hkh0ypr!3m3!8m2!3d29.957372!4d79.409735?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            style="
+                display:inline-block;
+                margin-top:10px;
+                color:#e3bb4c;
+                font-weight:bold;
+            "
+        >
+            📍 View on Google Maps →
+        </a>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-item-icon">📞</div>
+
+<div>
+
+<strong>Phone</strong>
+
+<p>+91 7704096301</p>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="contact-item-icon">🕐</div>
+
+<div>
+
+<strong>Opening Hours</strong>
+
+<p>
+Monday - Saturday<br>
+9:00 AM - 5:00 PM
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="contact-form">
+
+<h2>Send Enquiry</h2>
+
+<br>
+
+<input
+id="contactName"
+type="text"
+placeholder="Your Name">
+
+<input
+id="contactPhone"
+type="tel"
+placeholder="Mobile Number">
+
+<textarea
+id="contactMessage"
+placeholder="Your Requirement"></textarea>
+
+<button
+class="btn primary"
+onclick="sendEnquiry()">
+
+Send Enquiry
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div class="footer-column">
+
+<h3>JMB WPC STORE</h3>
+
+<p>
+Premium WPC doors, frames, windows,
+beds and other WPC products.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<a href="#home">Home</a>
+
+<a href="#categories">Categories</a>
+
+<a href="#products">Products</a>
+
+<a href="#reviews">Reviews</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Products</h3>
+
+<a href="#products">WPC Doors</a>
+
+<a href="#products">Door Frames</a>
+
+<a href="#products">Windows</a>
+
+<a href="#products">Beds</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Contact</h3>
+
+<a href="tel:+917704096301">
+📞 +91 7704096301
+</a>
+
+<a href="#">
+📍Jai MAA Bhagwati WPC Store, Maithan Road, Near Bus Stand<br>
+Gairsain, Chamoli, Uttarakhand, India 
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 JMB WPC STORE.
+All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- ================================
+     WHATSAPP
+================================ -->
+
+<a
+href="https://wa.me/917704096301"
+target="_blank"
+class="whatsapp">
+
+☎
+
+</a>
+
+
+
+<!-- ================================
+     CART OVERLAY
+================================ -->
+
+<div
+class="overlay"
+id="overlay"
+onclick="closeCart()">
+</div>
+
+
+
+<!-- ================================
+     CART
+================================ -->
+
+<div class="cart" id="cart">
+
+<div class="cart-header">
+
+<h2>🛒 Your Cart</h2>
+
+<button
+class="close"
+onclick="closeCart()">
+×
+</button>
+
+</div>
+
+
+<div class="cart-items" id="cartItems">
+
+<p style="text-align:center;color:#777;">
+Your cart is empty.
+</p>
+
+</div>
+
+
+<div class="cart-footer">
+
+<div class="total">
+
+<span>Total</span>
+
+<span id="cartTotal">
+₹0
+</span>
+
+</div>
+
+<button
+class="checkout"
+onclick="openCheckout()">
+
+Proceed to Checkout
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- ================================
+     CHECKOUT MODAL
+================================ -->
+
+<div
+class="modal"
+id="checkoutModal">
+
+<div class="modal-box">
+
+<button
+class="close"
+onclick="closeCheckout()">
+×
+</button>
+
+<h2>Place Your Order</h2>
+
+
+<div class="modal-total">
+
+<strong>Order Total:</strong>
+
+<span id="checkoutTotal">
+₹0
+</span>
+
+</div>
+
+
+<input
+id="customerName"
+type="text"
+placeholder="Full Name *">
+
+
+<input
+id="customerPhone"
+type="tel"
+placeholder="Mobile Number *">
+
+
+<input
+id="customerEmail"
+type="email"
+placeholder="Email Address">
+
+
+<textarea
+id="customerAddress"
+placeholder="Delivery Address *">
+</textarea>
+
+
+<textarea
+id="customerNote"
+placeholder="Additional Requirement">
+</textarea>
+
+
+<button
+class="checkout"
+onclick="placeOrder()">
+
+📱 Order on WhatsApp
+
+</button>
+
+</div>
+
+</div>
+
+
+
+    <script>
+
+       /* ==========================================
+   STORE SETTINGS
+========================================== */
+
+const WHATSAPP_NUMBER = "917704096301";
+
+
+/* ==========================================
+   PRODUCT DATABASE
+========================================== */
+
+const products = [
 
 /* =======================
    WPC DOORS
@@ -2404,6 +4344,877 @@ description:"Modern king size WPC bed."
 }
 
 ];
+
+
+/* ==========================================
+   CART
+========================================== */
+
+let cart = [];
+let currentCategory = "all";
+
+
+/* ==========================================
+   CATEGORY NAME
+========================================== */
+
+function getCategoryName(category){
+
+    const names = {
+        door:"WPC Door",
+        doorframe:"WPC Door Frame",
+        window:"WPC Window",
+        bed:"WPC Bed"
+    };
+
+    return names[category] || category;
+}
+
+
+/* ==========================================
+   DISPLAY PRODUCTS
+========================================== */
+
+function displayProducts(list){
+
+    const grid = document.getElementById("productGrid");
+
+    grid.innerHTML = "";
+
+    if(list.length === 0){
+
+        grid.innerHTML = `
+            <div style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:60px;
+            ">
+
+                <h3>No Product Found</h3>
+
+                <p style="color:#777;margin-top:8px;">
+                    Try another product name or category.
+                </p>
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    list.forEach(product => {
+
+        grid.innerHTML += `
+
+            <div class="product">
+
+                <div class="product-image">
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                        onerror="this.src='images/no-image.jpg'"
+                    >
+
+                    <span class="badge">
+                        ${product.subCategory}
+                    </span>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="category-name">
+                        ${getCategoryName(product.category)}
+                    </div>
+
+                    <h3>
+                        ${product.name}
+                    </h3>
+
+                    <p class="description">
+                        ${product.description}
+                    </p>
+
+
+                    <div class="product-bottom">
+
+                        <div class="price">
+                            ₹${product.price.toLocaleString("en-IN")}
+                        </div>
+
+                        <button
+                            class="add"
+                            onclick="addToCart(${product.id})"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ==========================================
+   FILTER
+========================================== */
+
+function filterProducts(category, button = null){
+
+    currentCategory = category;
+
+    if(button){
+
+        document
+            .querySelectorAll(".filter")
+            .forEach(btn => btn.classList.remove("active"));
+
+        button.classList.add("active");
+    }
+
+
+    let filtered;
+
+    if(category === "all"){
+
+        filtered = products;
+
+    }else{
+
+        filtered = products.filter(
+            product => product.category === category
+        );
+
+    }
+
+
+    displayProducts(filtered);
+
+
+    document
+        .getElementById("products")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+function searchProducts(){
+
+    const search =
+        document
+            .getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+
+    let filtered = products;
+
+
+    if(currentCategory !== "all"){
+
+        filtered = filtered.filter(
+            p => p.category === currentCategory
+        );
+
+    }
+
+
+    if(search){
+
+        filtered = filtered.filter(p =>
+
+            p.name.toLowerCase().includes(search) ||
+
+            p.subCategory.toLowerCase().includes(search) ||
+
+            p.description.toLowerCase().includes(search)
+
+        );
+
+    }
+
+
+    displayProducts(filtered);
+
+}
+
+
+/* ==========================================
+   ADD TO CART
+========================================== */
+
+function addToCart(id){
+
+    const product =
+        products.find(p => p.id === id);
+
+    const existing =
+        cart.find(p => p.id === id);
+
+
+    if(existing){
+
+        existing.quantity++;
+
+    }else{
+
+        cart.push({
+
+            ...product,
+
+            quantity:1
+
+        });
+
+    }
+
+
+    updateCart();
+
+    openCart();
+
+}
+
+
+/* ==========================================
+   UPDATE CART
+========================================== */
+
+function updateCart(){
+
+    const container =
+        document.getElementById("cartItems");
+
+
+    const count =
+        cart.reduce(
+            (sum,item) => sum + item.quantity,
+            0
+        );
+
+
+    const total =
+        cart.reduce(
+            (sum,item) =>
+                sum + (item.price * item.quantity),
+            0
+        );
+
+
+    document
+        .getElementById("cartCount")
+        .textContent = count;
+
+
+    document
+        .getElementById("cartTotal")
+        .textContent =
+            "₹" + total.toLocaleString("en-IN");
+
+
+    document
+        .getElementById("checkoutTotal")
+        .textContent =
+            "₹" + total.toLocaleString("en-IN");
+
+
+    if(cart.length === 0){
+
+        container.innerHTML = `
+
+            <p style="
+                text-align:center;
+                color:#777;
+                margin-top:30px;
+            ">
+                Your cart is empty.
+            </p>
+
+        `;
+
+        return;
+    }
+
+
+    container.innerHTML = "";
+
+
+    cart.forEach(item => {
+
+        container.innerHTML += `
+
+            <div class="cart-item">
+
+                <img
+                    src="${item.image}"
+                    onerror="this.src='images/no-image.jpg'"
+                >
+
+                <div class="cart-info">
+
+                    <h4>
+                        ${item.name}
+                    </h4>
+
+                    <div class="cart-price">
+                        ₹${item.price.toLocaleString("en-IN")}
+                    </div>
+
+
+                    <div class="quantity">
+
+                        <button
+                            onclick="changeQuantity(${item.id},-1)"
+                        >
+                            -
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            onclick="changeQuantity(${item.id},1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        class="remove"
+                        onclick="removeFromCart(${item.id})"
+                    >
+                        Remove
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ==========================================
+   QUANTITY
+========================================== */
+
+function changeQuantity(id, amount){
+
+    const item =
+        cart.find(p => p.id === id);
+
+
+    if(!item) return;
+
+
+    item.quantity += amount;
+
+
+    if(item.quantity <= 0){
+
+        cart =
+            cart.filter(
+                p => p.id !== id
+            );
+
+    }
+
+
+    updateCart();
+
+}
+
+
+/* ==========================================
+   REMOVE
+========================================== */
+
+function removeFromCart(id){
+
+    cart =
+        cart.filter(
+            p => p.id !== id
+        );
+
+
+    updateCart();
+
+}
+
+
+/* ==========================================
+   OPEN CART
+========================================== */
+
+function openCart(){
+
+    document
+        .getElementById("cart")
+        .classList.add("active");
+
+
+    document
+        .getElementById("overlay")
+        .classList.add("active");
+
+}
+
+
+/* ==========================================
+   CLOSE CART
+========================================== */
+
+function closeCart(){
+
+    document
+        .getElementById("cart")
+        .classList.remove("active");
+
+
+    document
+        .getElementById("overlay")
+        .classList.remove("active");
+
+}
+
+
+/* ==========================================
+   CHECKOUT
+========================================== */
+
+function openCheckout(){
+
+    if(cart.length === 0){
+
+        alert("Your cart is empty!");
+
+        return;
+    }
+
+
+    document
+        .getElementById("checkoutModal")
+        .classList.add("active");
+
+}
+
+
+function closeCheckout(){
+
+    document
+        .getElementById("checkoutModal")
+        .classList.remove("active");
+
+}
+
+
+/* ==========================================
+   WHATSAPP ORDER
+========================================== */
+
+function placeOrder(){
+
+    const name =
+        document
+            .getElementById("customerName")
+            .value
+            .trim();
+
+
+    const phone =
+        document
+            .getElementById("customerPhone")
+            .value
+            .trim();
+
+
+    const email =
+        document
+            .getElementById("customerEmail")
+            .value
+            .trim();
+
+
+    const address =
+        document
+            .getElementById("customerAddress")
+            .value
+            .trim();
+
+
+    const note =
+        document
+            .getElementById("customerNote")
+            .value
+            .trim();
+
+
+    if(!name || !phone || !address){
+
+        alert(
+            "Please enter your Name, Mobile Number and Address."
+        );
+
+        return;
+    }
+
+
+    let message =
+        "🛒 *NEW ORDER - JMB WPC STORE*%0A%0A";
+
+
+    message +=
+        "*CUSTOMER DETAILS*%0A";
+
+
+    message +=
+        "Name: " +
+        encodeURIComponent(name) +
+        "%0A";
+
+
+    message +=
+        "Phone: " +
+        encodeURIComponent(phone) +
+        "%0A";
+
+
+    message +=
+        "Email: " +
+        encodeURIComponent(
+            email || "Not provided"
+        ) +
+        "%0A";
+
+
+    message +=
+        "Address: " +
+        encodeURIComponent(address) +
+        "%0A%0A";
+
+
+    message +=
+        "*ORDER DETAILS*%0A";
+
+
+    cart.forEach((item,index) => {
+
+        message +=
+
+            (index + 1) +
+            ". " +
+            encodeURIComponent(item.name) +
+            " × " +
+            item.quantity +
+            " = ₹" +
+            (item.price * item.quantity)
+                .toLocaleString("en-IN") +
+            "%0A";
+
+    });
+
+
+    const total =
+        cart.reduce(
+            (sum,item) =>
+                sum + (item.price * item.quantity),
+            0
+        );
+
+
+    message +=
+
+        "%0A*TOTAL: ₹" +
+        total.toLocaleString("en-IN") +
+        "*%0A";
+
+
+    if(note){
+
+        message +=
+
+            "%0A*Additional Requirement:*%0A" +
+            encodeURIComponent(note);
+
+    }
+
+
+    const url =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        message;
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* ==========================================
+   CONTACT ENQUIRY
+========================================== */
+
+function sendEnquiry(){
+
+    const name =
+        document
+            .getElementById("contactName")
+            .value
+            .trim();
+
+
+    const phone =
+        document
+            .getElementById("contactPhone")
+            .value
+            .trim();
+
+
+    const message =
+        document
+            .getElementById("contactMessage")
+            .value
+            .trim();
+
+
+    if(!name || !phone || !message){
+
+        alert(
+            "Please enter your Name, Mobile Number and Requirement."
+        );
+
+        return;
+    }
+
+
+    const text =
+
+        "Hello JMB WPC STORE,%0A%0A" +
+
+        "I want to make an enquiry.%0A%0A" +
+
+        "Name: " +
+        encodeURIComponent(name) +
+        "%0A" +
+
+        "Phone: " +
+        encodeURIComponent(phone) +
+        "%0A" +
+
+        "Requirement: " +
+        encodeURIComponent(message);
+
+
+    window.open(
+
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        text,
+
+        "_blank"
+
+    );
+
+}
+
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+function toggleMenu(){
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("active");
+
+}
+
+
+
+/* ==========================================
+   CUSTOMER REVIEWS
+========================================== */
+
+const REVIEWS_STORAGE_KEY = "jmbWpcCustomerReviews";
+let selectedReviewRating = 0;
+
+function getSavedReviews(){
+    try{
+        const saved = JSON.parse(localStorage.getItem(REVIEWS_STORAGE_KEY) || "[]");
+        return Array.isArray(saved) ? saved : [];
+    }catch(error){
+        return [];
+    }
+}
+
+function saveReviews(reviews){
+    try{
+        localStorage.setItem(REVIEWS_STORAGE_KEY, JSON.stringify(reviews));
+        return true;
+    }catch(error){
+        alert("Your browser could not save the review. Please check your browser storage settings.");
+        return false;
+    }
+}
+
+function setReviewRating(rating){
+    selectedReviewRating = Number(rating);
+    document.querySelectorAll("#starPicker button").forEach(button => {
+        const isSelected = Number(button.dataset.rating) <= selectedReviewRating;
+        button.classList.toggle("selected", isSelected);
+        button.setAttribute("aria-pressed", String(Number(button.dataset.rating) === selectedReviewRating));
+    });
+}
+
+document.querySelectorAll("#starPicker button").forEach(button => {
+    button.addEventListener("click", () => setReviewRating(button.dataset.rating));
+});
+
+document.getElementById("reviewForm").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const name = document.getElementById("reviewName").value.trim();
+    const reviewText = document.getElementById("reviewText").value.trim();
+
+    if(!name || !reviewText){
+        alert("Please enter your name and review.");
+        return;
+    }
+
+    if(selectedReviewRating < 1 || selectedReviewRating > 5){
+        alert("Please select a star rating from 1 to 5.");
+        return;
+    }
+
+    const reviews = getSavedReviews();
+    reviews.unshift({
+        name: name,
+        rating: selectedReviewRating,
+        text: reviewText,
+        date: new Date().toISOString()
+    });
+
+    if(saveReviews(reviews)){
+        this.reset();
+        setReviewRating(0);
+        displayReviews();
+        alert("Thank you! Your review has been saved in this browser.");
+    }
+});
+
+function displayReviews(){
+    const reviews = getSavedReviews();
+    const list = document.getElementById("reviewList");
+    const averageElement = document.getElementById("averageRating");
+    const averageStarsElement = document.getElementById("averageStars");
+    const countElement = document.getElementById("reviewCount");
+
+    list.replaceChildren();
+
+    if(reviews.length === 0){
+        averageElement.textContent = "0.0/5";
+        averageStarsElement.textContent = "☆☆☆☆☆";
+        countElement.textContent = "No reviews yet. Be the first to review!";
+        const empty = document.createElement("div");
+        empty.className = "review-empty";
+        empty.textContent = "No reviews yet. Your feedback can be the first!";
+        list.appendChild(empty);
+        return;
+    }
+
+    const totalRating = reviews.reduce((sum, review) => {
+        const rating = Number(review.rating);
+        return sum + (rating >= 1 && rating <= 5 ? rating : 0);
+    }, 0);
+    const average = totalRating / reviews.length;
+
+    averageElement.textContent = average.toFixed(1) + "/5";
+    averageStarsElement.textContent = "★".repeat(Math.round(average)) + "☆".repeat(5 - Math.round(average));
+    countElement.textContent = reviews.length + (reviews.length === 1 ? " review" : " reviews");
+
+    reviews.forEach(review => {
+        const card = document.createElement("article");
+        card.className = "review-card";
+
+        const top = document.createElement("div");
+        top.className = "review-card-top";
+
+        const identity = document.createElement("div");
+        const name = document.createElement("div");
+        name.className = "review-card-name";
+        name.textContent = String(review.name || "Customer");
+
+        const date = document.createElement("div");
+        date.className = "review-card-date";
+        const parsedDate = new Date(review.date);
+        date.textContent = Number.isNaN(parsedDate.getTime())
+            ? ""
+            : parsedDate.toLocaleDateString("en-IN", {day:"numeric", month:"short", year:"numeric"});
+
+        identity.append(name, date);
+
+        const stars = document.createElement("div");
+        stars.className = "review-card-stars";
+        const rating = Math.max(0, Math.min(5, Number(review.rating) || 0));
+        stars.textContent = "★".repeat(rating) + "☆".repeat(5 - rating);
+        stars.setAttribute("aria-label", rating + " out of 5 stars");
+
+        const text = document.createElement("p");
+        text.className = "review-card-text";
+        text.textContent = String(review.text || "");
+
+        top.append(identity, stars);
+        card.append(top, text);
+        list.appendChild(card);
+    });
+}
+
+
+/* ==========================================
+   INITIALIZE
+========================================== */
+
+displayProducts(products);
+
+displayReviews();
+
+updateCart();
+
+    </script>
+
+</body>
+
+</html>
+
 
 
 /* ==========================================
